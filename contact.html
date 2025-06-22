@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <title>Zay Shop - Contact</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="img/apple-icon.png">
+        <link rel="shortcut icon" type="image/x-icon"
+            href="img/favicon.ico">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/templatemo.css">
+        <link rel="stylesheet" href="css/custom.css">
+
+        <!-- Load fonts style after rendering the layout styles -->
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+        <link rel="stylesheet" href="css/fontawesome.min.css">
+
+        <!-- Load map styles -->
+        <link rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin />
+        <!--
+    
+TemplateMo 559 Zay Shop
+
+https://templatemo.com/tm-559-zay-shop
+
+-->
+    </head>
+
+    <body>
+
+        <!-- Header -->
+        <div id="header"></div>
+
+        <!-- Start Content Page -->
+        <div class="container-fluid bg-light py-5">
+            <div class="col-md-6 m-auto text-center">
+                <h1 class="h1">Contactenos</h1>
+                <p>
+                    Si tiene alguna pregunta, inquietud o comentario, no
+                    dude en ponerse en contacto con nosotros. Estamos aquí
+                    para ayudarle y responder a sus preguntas. Puede
+                    utilizar el formulario de contacto a continuación para
+                    enviarnos un mensaje directamente. Nos pondremos en
+                    contacto con usted lo antes posible.
+                </p>
+            </div>
+        </div>
+
+        <!-- Start Map -->
+        <div id="mapid" style="width: 100%; height: 300px;">
+            <iframe id="mapid" style="width: 100%; height: 300px;" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31855.34781971631!2d-76.27057205532876!3d3.606135004742476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1750213421271!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <!-- Ena Map -->
+
+        <!-- Start Contact -->
+        <div class="container py-5">
+            <div class="row py-5">
+                <form class="col-md-9 m-auto" method="post" role="form">
+                    <div class="row">
+                        <div class="form-group col-md-6 mb-3">
+                            <label for="inputname">Nombre Completo</label>
+                            <input type="text" class="form-control mt-1"
+                                id="name" name="name" placeholder="Nombre Completo">
+                        </div>
+                        <div class="form-group col-md-6 mb-3">
+                            <label for="inputemail">Email</label>
+                            <input type="email" class="form-control mt-1"
+                                id="email" name="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputsubject">Asunto</label>
+                        <input type="text" class="form-control mt-1"
+                            id="subject" name="subject" placeholder="Asunto">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputmessage">Mensaje</label>
+                        <textarea class="form-control mt-1" id="message"
+                            name="message" placeholder="Mensaje"
+                            rows="8"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col text-end mt-2">
+                            <button type="button"
+                                class="btn btn-success btn-lg px-3">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- End Contact -->
+
+        <div id="footer"></div>
+
+        <!-- Start Script -->
+        <script src="js/jquery-1.11.0.min.js"></script>
+        <script src="js/jquery-migrate-1.2.1.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/templatemo.js"></script>
+        <script src="js/custom.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                cargarFragmento("header", "header.html");
+                cargarFragmento("footer", "footer.html");
+            });
+        </script>
+        <!-- End Script -->
+    </body>
+
+</html>

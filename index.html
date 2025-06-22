@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>TechNova Shop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/templatemo.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+
+    <script src="DB/funciones.js"></script>
+    <script src="DB/datos.js"></script>
+    <!--
+    
+TemplateMo 559 Zay Shop
+
+https://templatemo.com/tm-559-zay-shop
+
+-->
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Start Banner Hero -->
+    <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">  
+            <!-- Los indicadores del carrusel se generarán aquí dinámicamente -->
+        </ol>
+        <div class="carousel-inner">
+            <!-- Los items del carrusel se generarán aquí dinámicamente -->
+        </div>
+        <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel"
+            role="button" data-bs-slide="prev">
+            <i class="fas fa-chevron-left"></i>
+        </a>
+        <a class="carousel-control-next text-decoration-none w-auto pe-3" href="#template-mo-zay-hero-carousel"
+            role="button" data-bs-slide="next">
+            <i class="fas fa-chevron-right"></i>
+        </a>
+    </div>
+
+    <script>
+        const banners = obtenerBanners();
+        const carouselInner = document.querySelector('.carousel-inner');
+        const carouselIndicators = document.querySelector('.carousel-indicators');
+
+        carouselInner.innerHTML = '';
+        carouselIndicators.innerHTML = '';
+
+        banners.forEach((banner, index) => {
+            // Crear indicador
+            const indicator = document.createElement('li');
+            indicator.setAttribute('data-bs-target', '#template-mo-zay-hero-carousel');
+            indicator.setAttribute('data-bs-slide-to', index);
+            if (index === 0) indicator.classList.add('active');
+            carouselIndicators.appendChild(indicator);
+
+            // Crear item del carrusel
+            const item = document.createElement('div');
+            item.className = 'carousel-item' + (index === 0 ? ' active' : '');
+            item.innerHTML = `
+                <div class="container">
+                    <div class="row p-5">
+                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                            <img src="${banner.imagen}" class="img-fluid" alt="${banner.titulo}">
+                        </div>
+                        <div class="col-lg-6 mb-0 d-flex align-items-center">
+                            <div class="text-align-left align-self-center">
+                                <h1 class="h1">${banner.titulo}</h1>
+                                <h3 class="h2">${banner.subtitulo || ''}</h3>
+                                <p>${banner.descripcion || ''}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            carouselInner.appendChild(item);
+        });
+
+
+
+    </script>
+    <!-- End Banner Hero -->
+
+    <!-- Start Categories of The Month -->
+    <section class="container py-5">
+        <div class="row text-center pt-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1">Categorias de mes</h1>
+                <p>
+                    Explora nuestras categorías destacadas del mes, donde encontrarás una selección de productos
+                    cuidadosamente elegidos para satisfacer tus necesidades y gustos. Desde tecnología innovadora
+                    hasta moda elegante, cada categoría ofrece una experiencia única de compra. ¡Descubre lo mejor
+                    de nuestras colecciones y encuentra lo que amas!
+                </p>
+            </div>
+        </div>
+        <div class="row" id="categoriasIndex">
+            <!-- Las categorías se generarán aquí dinámicamente -->
+        </div>
+
+        <script>
+            const categorias = obtenerCategorias();
+
+            // Limitar a las primeras 3 categorías
+            // Si hay menos de 3 categorías, se mostrarán todas
+            const categoriasLimitadas = Array.from(categorias).slice(0, 3);
+
+            const contenedorCategorias = document.getElementById("categoriasIndex");
+
+            categoriasLimitadas.forEach(categoria => {
+                const categoriaDiv = document.createElement("div");
+                categoriaDiv.className = "col-12 col-md-4 p-5 mt-3";
+                categoriaDiv.innerHTML = `
+                        <a href="#"><img src="${categoria.imagen}" class="rounded-circle img-fluid border"></a>
+                        <h5 class="text-center mt-3 mb-3">${categoria.nombre}</h5>
+                        <p class="text-center"><a class="btn btn-success" href="productos.html?categoria=${categoria.id}">Go Shop</a></p>
+                    `;
+                contenedorCategorias.appendChild(categoriaDiv);
+            });
+
+        </script>
+    </section>
+    <!-- End Categories of The Month -->
+
+    <!-- Start Featured Product -->
+    <section class="bg-light">
+        <div class="container py-5">
+            <div class="row text-center py-3">
+                <div class="col-lg-6 m-auto">
+                    <h1 class="h1">Featured Product</h1>
+                    <p>
+                        Reprehenderit in voluptate velit esse cillum dolore
+                        eu fugiat nulla pariatur.
+                        Excepteur sint occaecat cupidatat non proident.
+                    </p>
+                </div>
+            </div>
+            <div class="row" id="productoDestacado">
+                <!-- El producto destacado se generará aquí dinámicamente -->
+            </div>
+
+            <script>
+                // Obtener el producto destacado
+                const arrayProductos = obtenerProductoDestacado();
+                // Seleccionar el contenedor del producto destacado
+                const contenedorProducto = document.getElementById("productoDestacado");
+
+                arrayProductos.forEach(productoDestacado => {
+
+                    const productoDestacadoDiv = document.createElement("div");
+
+                    productoDestacadoDiv.className = "col-12 col-md-4 mb-4";
+
+
+                    // Crear el HTML del producto destacado
+                    productoDestacadoDiv.innerHTML = `
+                            <div class="card h-100">
+                                <a href="detalles_producto.html?productoId=${productoDestacado.id}">
+                                    <img src="${productoDestacado.imagen}" class="card-img-top" alt="${productoDestacado.nombre}">
+                                </a>
+                                <div class="card-body">
+                                    <ul class="list-unstyled d-flex justify-content-between">
+                                        <li>
+                                            ${'<i class="text-warning fa fa-star"></i>'.repeat(productoDestacado.estrellas)}
+                                            ${`<i class="text-muted fa fa-star"></i>`.repeat(5 - productoDestacado.estrellas)}
+                                            </li>
+                                    </ul>
+                                    <p class="text-center mb-0">${formatearCOP(productoDestacado.precio)}</p>
+                                </div>
+                            </div>`;
+
+                    contenedorProducto.appendChild(productoDestacadoDiv);
+                });
+            </script>
+        </div>
+    </section>
+    <!-- End Featured Product -->
+
+    <div id="footer"></div>
+
+    <!-- Start Script -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/templatemo.js"></script>
+    <script src="js/custom.js"></script>
+
+
+    <!-- End Script -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            cargarFragmento("header", "header.html");
+            cargarFragmento("footer", "footer.html");
+
+            if (!sessionStorage.getItem("contadorVisitas")) {
+
+                //poner contador visitas
+                let contadorVisitas = sessionStorage.getItem('contadorVisitas') || 0;
+                contadorVisitas = parseInt(contadorVisitas) + 1; // Incrementar el contador
+                sessionStorage.setItem('contadorVisitas', contadorVisitas);
+
+                // Asegurarse de que el contador sea un número
+                const etiquetaContadorVisitas = document.getElementById('contadorVisitas');
+                etiquetaContadorVisitas.textContent = contadorVisitas;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

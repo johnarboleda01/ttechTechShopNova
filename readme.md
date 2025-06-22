@@ -1,6 +1,6 @@
-# MiCompraYa
+# TechShopNova
 
-MiCompraYa es una aplicación web diseñada para simplificar y mejorar la experiencia de compra. Permite a los usuarios crear listas de la compra, comparar precios de diferentes tiendas y administrar el inventario de su despensa.
+TechShopNova es una aplicación web diseñada para simplificar y mejorar la experiencia de compra. Permite a los usuarios crear listas de la compra, comparar precios de diferentes tiendas y administrar el inventario de su despensa.
 
 ## Características
 
