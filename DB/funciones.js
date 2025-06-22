@@ -62,7 +62,7 @@ function obtenerBanners() {
 
 // Devolver la lista de categorias almacenadas en localStorage 
 function obtenerCarrito() {
-    const carrito = sessionStorage.getItem("arrCarrito");
+    const carrito = sessionStorage.getItem("arrCarrito") || "[]"; // Si no hay carrito, devolver un array vacío
     const json = JSON.parse(carrito);
 
     return json;
@@ -136,7 +136,10 @@ function mostrarCarrito() {
 
     // Asegurarse de que el contador sea un número
     const etiquetaContadorCarrito = document.getElementById('contadorCarrito');
-    etiquetaContadorCarrito.textContent = contadorCarrito;
+
+    if (etiquetaContadorCarrito) {
+        etiquetaContadorCarrito.textContent = contadorCarrito;
+    }
 }
 
 

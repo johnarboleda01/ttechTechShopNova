@@ -6,7 +6,7 @@ const arrProductos = {
     nombre: "Smartphones",
     precio: 103000,
     descripcion: "Teléfonos inteligentes con tecnología de última generación, pantallas de alta resolución y gran rendimiento para el uso diario.",
-    imagen: "img/product_single_01.jpg",
+    imagen: "img/product_01.jpg",
     reviews: 24,
     estrellas: 3,
     marca: "TechNova",
@@ -31,7 +31,7 @@ const arrProductos = {
     nombre: "Tablets",
     precio: 121000,
     descripcion: "Tabletas compactas y potentes ideales para estudiar, trabajar o disfrutar de contenido multimedia desde cualquier lugar.",
-    imagen: "img/product_single_02.jpg",
+    imagen: "img/product_02.jpg",
     reviews: 21,
     estrellas: 5,
     marca: "TechNova",
@@ -56,7 +56,7 @@ const arrProductos = {
     nombre: "Fundas",
     precio: 81800,
     descripcion: "Fundas resistentes y elegantes para proteger tu dispositivo contra golpes, caídas y arañazos, disponibles en varios estilos.",
-    imagen: "img/product_single_03.jpg",
+    imagen: "img/product_03.jpg",
     reviews: 36,
     estrellas: 2,
     marca: "TechNova",
@@ -81,7 +81,7 @@ const arrProductos = {
     nombre: "Bombillas inteligentes",
     precio: 61000,
     descripcion: "Iluminación LED inteligente que puedes controlar desde tu teléfono o asistente de voz. Ahorro energético con estilo.",
-    imagen: "img/product_single_04.jpg",
+    imagen: "img/product_04.jpg",
     reviews: 48,
     estrellas: 3,
     marca: "TechNova",
@@ -97,7 +97,7 @@ const arrProductos = {
     nombre: "Relojes inteligentes",
     precio: 50000,
     descripcion: "Smartwatches con funciones de salud, notificaciones y control de música. Diseñados para mantenerte conectado todo el día.",
-    imagen: "img/product_single_05.jpg",
+    imagen: "img/product_05.jpg",
     reviews: 16,
     estrellas: 5,
     marca: "TechNova",
@@ -117,7 +117,7 @@ const arrProductos = {
     nombre: "Aspiradoras robot",
     precio: 90000,
     descripcion: "Robots aspiradores inteligentes que limpian tu hogar automáticamente. Eficientes, silenciosos y programables desde tu móvil.",
-    imagen: "img/product_single_06.jpg",
+    imagen: "img/product_06.jpg",
     reviews: 32,
     estrellas: 4,
     marca: "TechNova",
@@ -146,11 +146,10 @@ const arrCategorias = {
   },
   '002': {
     "id": "002",
-    "nombre": "Electrodomésticos",
-    "imagen": "img/category_img_02.jpg",  
-    "descripcion": "Aparatos diseñados para facilitar las tareas del hogar, desde la cocina hasta la limpieza.",
-    "nombre": "Accesorios y Periféricos",
-    "ejemplos": ["fundas", "cargadores", "cables", "teclados", "mouse", "discos duros", "power banks"]
+    "nombre": "Software y Licencias",
+    "imagen": "img/category_img_02.jpg",
+    "descripcion": "Programas y aplicaciones que mejoran la productividad, seguridad y entretenimiento digital, disponibles en formato digital o físico.",
+    "ejemplos": ["licencias de software", "aplicaciones para productividad", "software de seguridad"]
   },
   '003': {
     "id": "003",
@@ -193,20 +192,6 @@ const arrCategorias = {
     "imagen": "img/category_img_08.jpg",
     "descripcion": "Electrodomésticos que se conectan a Internet y pueden ser controlados de forma remota, mejorando la eficiencia y comodidad del hogar.",
     "ejemplos": ["aspiradoras robot", "cafeteras conectadas", "pequeños electrodomésticos smart"]
-  },
-  '009': {
-    "id": "009",
-    "nombre": "Reacondicionados / Refurbished",
-    "imagen": "img/category_img_09.jpg",
-    "descripcion": "Productos reacondicionados que han sido inspeccionados, reparados y certificados para ofrecer una segunda vida con garantía.",
-    "ejemplos": ["teléfonos reacondicionados", "laptops reacondicionados", "gadgets con garantía"]
-  },
-  '010': {
-    "id": "010",
-    "nombre": "Software y Licencias",
-    "imagen": "img/category_img_10.jpg",
-    "descripcion": "Programas y aplicaciones que mejoran la productividad, seguridad y entretenimiento digital, disponibles en formato digital o físico.",
-    "ejemplos": ["licencias de software", "aplicaciones para productividad", "software de seguridad"]
   }
 };
 
