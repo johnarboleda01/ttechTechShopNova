@@ -122,10 +122,11 @@ https://templatemo.com/tm-559-zay-shop
             categoriasLimitadas.forEach(categoria => {
                 const categoriaDiv = document.createElement("div");
                 categoriaDiv.className = "col-12 col-md-4 p-5 mt-3";
+                categoriaDiv.style.textAlign = "center";
                 categoriaDiv.innerHTML = `
                         <a href="#"><img src="${categoria.imagen}" class="rounded-circle img-fluid border"></a>
                         <h5 class="text-center mt-3 mb-3">${categoria.nombre}</h5>
-                        <p class="text-center"><a class="btn btn-success" href="productos.html?categoria=${categoria.id}">Go Shop</a></p>
+                        <p class="text-center"><a class="btn btn-success" href="productos.html?categoria=${categoria.id}">Ir a Producto</a></p>
                     `;
                 contenedorCategorias.appendChild(categoriaDiv);
             });
