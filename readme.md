@@ -10,4 +10,3 @@ TechShopNova es una aplicación web diseñada para simplificar y mejorar la expe
 ## Tecnologías Utilizadas
 
 * **Frontend:** HTML, CSS, JavaScript
-* **Backend:** Python
